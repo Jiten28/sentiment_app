@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sentiment/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis Tool</h1>
+        <form method="POST" action="{% url 'analyze' %}">
+            {% csrf_token %}
+            <textarea name="text" placeholder="Enter your text here..." required></textarea>
+            <br>
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+</body>
+</html>

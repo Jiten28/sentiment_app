@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sentiment/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis Result</h1>
+        <p><strong>Input:</strong> {{ text }}</p>
+        <p><strong>Polarity:</strong> {{ polarity }}</p>
+        <p><strong>Subjectivity:</strong> {{ subjectivity }}</p>
+        <p><strong>Overall Sentiment:</strong> {{ sentiment }}</p>
+        <a href="{% url 'index' %}">Try Again</a>
+    </div>
+</body>
+</html>
